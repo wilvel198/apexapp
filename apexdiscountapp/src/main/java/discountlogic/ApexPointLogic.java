@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.apex.models.ResponseValue;
 
 @Component
-public class ApexDiscountLogic {
+public class ApexPointLogic {
 
 	public ResponseValue getServiceStatus() {
 		ResponseValue response2Call = new ResponseValue();

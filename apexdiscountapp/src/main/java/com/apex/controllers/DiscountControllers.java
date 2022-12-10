@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.apex.models.ResponseValue;
 import com.apex.models.TransactionInfo;
 
-import discountlogic.ApexDiscountLogic;
+import discountlogic.ApexPointLogic;
 
 @RestController
 public class DiscountControllers {
@@ -22,7 +22,7 @@ public class DiscountControllers {
 	@GetMapping(path = "/status", produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseValue status() {
 		
-		ApexDiscountLogic serviceStatusInfo = new ApexDiscountLogic();
+		ApexPointLogic serviceStatusInfo = new ApexPointLogic();
 		ResponseValue serviceCheck = serviceStatusInfo.getServiceStatus();
 		return serviceCheck;
 		
@@ -35,7 +35,7 @@ public class DiscountControllers {
 		
 		System.out.println("value to be processed " + transactionInfo.getDollarSpent());
 		
-		ApexDiscountLogic calculatedDiscount = new ApexDiscountLogic();
+		ApexPointLogic calculatedDiscount = new ApexPointLogic();
 		
 		ResponseValue calculatedPoints = calculatedDiscount.calculateDiscount(spentValue);
 		
