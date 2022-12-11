@@ -7,7 +7,7 @@ import com.apex.models.ResponseValue;
 import org.junit.jupiter.api.Test;
 
 
-class ApexPointServicesTest {
+class ApexPointResponseTest {
 
 	@Test
 	void testGetServiceStatus() {
@@ -20,7 +20,9 @@ class ApexPointServicesTest {
 
 	@Test
 	void testCalculateDiscount() {
-		// fail("Not yet implemented");
+		ResponseValue responseValue = Mockito.mock(ResponseValue.class);
+		when(responseValue.getResponseInformation()).thenReturn("The Service is Up");
+		assertEquals((responseValue.getResponseInformation()), "The Service is Up");
 	}
 
 }
