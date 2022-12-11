@@ -7,7 +7,7 @@ import com.apex.models.ResponseValue;
 import org.junit.jupiter.api.Test;
 
 
-class ApexPointLogicTest {
+class ApexPointServicesTest {
 
 	@Test
 	void testGetServiceStatus() {
