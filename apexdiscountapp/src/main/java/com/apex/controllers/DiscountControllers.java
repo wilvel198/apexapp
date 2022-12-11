@@ -16,26 +16,25 @@ import discountlogic.ApexPointLogic;
 public class DiscountControllers {
 	private static final Logger LOGGER = LogManager.getLogger(DiscountControllers.class);
 
-	@GetMapping(path = "/status", produces=MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(path = "/status", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseValue status() {
 		LOGGER.debug("holder for debug status call");
 		ApexPointLogic serviceStatusInfo = new ApexPointLogic();
 		ResponseValue serviceCheck = serviceStatusInfo.getServiceStatus();
 		return serviceCheck;
-		
+
 	}
-	
-	
-	@PostMapping(value = "/calculatedpoints",  consumes = "application/json", produces = "application/json")
+
+	@PostMapping(value = "/calculatedpoints", consumes = "application/json", produces = "application/json")
 	public ResponseValue transactionInfo(@RequestBody TransactionInfo transactionInfo, HttpServletResponse response) {
 		LOGGER.debug("holder for debug calculate points");
 		int spentValue = transactionInfo.getDollarSpent();
-		
+
 		LOGGER.debug("value to be processed " + transactionInfo.getDollarSpent());
-		
+
 		ApexPointLogic calculatedDiscount = new ApexPointLogic();
 		ResponseValue calculatedPoints = calculatedDiscount.calculateDiscount(spentValue);
-		
+
 		return calculatedPoints;
 	}
 }

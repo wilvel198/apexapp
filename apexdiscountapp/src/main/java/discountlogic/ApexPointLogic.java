@@ -41,7 +41,7 @@ public class ApexPointLogic {
 		pass = val / 100;
 
 		if (val > 49 && val < 101 && pass == 0) {
-			points = val;
+			points = val - 50;
 		}
 		if (pass > 0) {
 			val = val - 100;

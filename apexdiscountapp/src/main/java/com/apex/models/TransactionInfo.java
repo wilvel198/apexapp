@@ -1,7 +1,7 @@
 package com.apex.models;
 
 public class TransactionInfo {
-	
+
 	public int dollarSpent;
 
 	public int getDollarSpent() {
@@ -11,7 +11,5 @@ public class TransactionInfo {
 	public void setDollarSpent(int dollarSpent) {
 		this.dollarSpent = dollarSpent;
 	}
-
-	
 
 }

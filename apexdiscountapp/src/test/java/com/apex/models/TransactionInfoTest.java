@@ -10,13 +10,11 @@ class TransactionInfoTest {
 
 	@Test
 	void testGetDollarSpent() {
-	
+
 		TransactionInfo responseValue = Mockito.mock(TransactionInfo.class);
-			
-			when(responseValue.getDollarSpent()).thenReturn(90);
-			assertEquals(responseValue.getDollarSpent(),90);
+
+		when(responseValue.getDollarSpent()).thenReturn(90);
+		assertEquals(responseValue.getDollarSpent(), 90);
 	}
-
-
 
 }

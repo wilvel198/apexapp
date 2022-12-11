@@ -1,8 +1,6 @@
 package com.apex.models;
 
-
 public class ResponseValue {
-	
 
 	private String responseInformation;
 

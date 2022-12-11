@@ -9,16 +9,13 @@ import org.mockito.Mockito;
 
 class ResponseValueTest {
 
-	
-	
 	@Test
 	void testGetResponseInformation() {
 
-	   ResponseValue responseValue = Mockito.mock(ResponseValue.class);
-		
-		when(responseValue.getResponseInformation()).thenReturn("System is Up");
-		assertEquals(responseValue.getResponseInformation(),"System is Up");
-	}
+		ResponseValue responseValue = Mockito.mock(ResponseValue.class);
 
+		when(responseValue.getResponseInformation()).thenReturn("System is Up");
+		assertEquals(responseValue.getResponseInformation(), "System is Up");
+	}
 
 }

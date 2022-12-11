@@ -21,8 +21,8 @@ class ApexPointResponseTest {
 	@Test
 	void testCalculateDiscount() {
 		ResponseValue responseValue = Mockito.mock(ResponseValue.class);
-		when(responseValue.getResponseInformation()).thenReturn("The Service is Up");
-		assertEquals((responseValue.getResponseInformation()), "The Service is Up");
+		when(responseValue.getResponseInformation()).thenReturn("Calculated Points :90");
+		assertEquals((responseValue.getResponseInformation()), "Calculated Points :90");
 	}
 
 }
