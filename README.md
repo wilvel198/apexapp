@@ -54,6 +54,16 @@ apexdiscountapp-0.0.1-SNAPSHOT.jar
 run the jar
 java -jar apexdiscountapp-0.0.1-SNAPSHOT.jar
 
+-------------------------------------------------------
+added docker support to project. Docker file is in base directory.
+
+Build Docker image
+docker build -f Dockerfile -t docker-spring-boot
+
+Run Docker image
+docker run -p 8080:8080  
+
+
 
 
 
